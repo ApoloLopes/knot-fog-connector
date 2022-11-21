@@ -6,7 +6,7 @@ class AMQPConnection {
     this.url = `amqp://${settings.username}:${settings.password}@${settings.hostname}:${settings.port}`;
     this.listeners = [];
   }
-  
+
   async start(onSetup) {
     try {
       const connection = await amqplib.connect([this.url]);
